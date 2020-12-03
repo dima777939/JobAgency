@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/">Menu</a>
+<br>
+    <form action="" method="post">
+    {% csrf_token %}
+    <table>{{ form.as_table }}</table>
+    <button type="submit">Login</button>
+    </form>
+<br><br><br>
+<a href="http://127.0.0.1:8000/exit">Exit</a>
+</body>
+</html>

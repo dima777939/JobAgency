@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/">Menu</a>
+<br>
+    <div>{% for data in context %}
+         {% if data.staff %}
+        <h2>You {{ data.staff }}</h2>
+         {% endif %}
+         {% endfor %}
+        <ol>{% for data in context %}
+                {% if data.description %}
+                    <li>{{ data.description }}</li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </div>
+        {% for data in context %}
+        {% if data.staff %}
+            <form action="/{{ data.staff }}/new/" target="_blank">
+    <button>Creat {{ data.staff }}</button>
+            </form>
+        {% endif %}
+        {% endfor %}
+<br><br><br>
+<a href="http://127.0.0.1:8000/exit">Exit</a>
+</body>
+</html>

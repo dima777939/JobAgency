@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creat</title>
+</head>
+<body>
+<form action="/resume/new/" method="get">
+    {% csrf_token %}
+    <table>{{ form.as_table }}</table>
+    <button type="submit">Create</button>
+    <br>
+    <a href="/resume/new/">Create resume</a><br>
+    <a href="/vacancy/new/">Public vacancy</a>
+</form>
+<br><br><br>
+<a href="/">Menu</a>
+</body>
+</html>

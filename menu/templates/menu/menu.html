@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+    <h2>Welcome to HyperJob!</h2>
+    {% for name, link in mane_menu.items %}
+    <div><a href="/{{link}}">{{name|capfirst}}</a></div>
+    {% endfor %}
+    <br><br><br>
+<a href="exit">Exit</a>
+</body>
+</html>

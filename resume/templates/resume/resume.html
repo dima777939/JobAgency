@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+</head>
+<body>
+    <h2>Resume</h2>
+    {% for name in data %}
+        <div>{{ forloop.counter }}. {{ name.author }}: {{ name.description }}</div>
+    {% endfor %}
+    <br>
+    <a href="http://127.0.0.1:8000/">HyperJob</a>
+</body>
+</html>
